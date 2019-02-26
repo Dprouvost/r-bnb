@@ -4,6 +4,7 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Category.delete_all
@@ -28,4 +29,3 @@ Category.create!(name: "Psychedelic Rock")
 Category.create!(name: "Tango")
 Category.create!(name: "Country")
 Category.create!(name: "Deep House")
-

@@ -1,0 +1,8 @@
+<div class="container">
+  <%= simple_form_for @profile do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :user_type, as: :select2, collection: Profile::USER_TYPE %>
+    <%= f.button :submit,  class: "btn btn-primary" %>
+  <% end %>
+</div>
