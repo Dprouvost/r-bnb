@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_25_165626) do
+ActiveRecord::Schema.define(version: 2019_02_26_101519) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,14 +51,10 @@ ActiveRecord::Schema.define(version: 2019_02_25_165626) do
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.text "comment"
-    t.bigint "artist_id"
-    t.bigint "profile_id"
     t.bigint "booking_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["artist_id"], name: "index_reviews_on_artist_id"
     t.index ["booking_id"], name: "index_reviews_on_booking_id"
-    t.index ["profile_id"], name: "index_reviews_on_profile_id"
   end
 
   create_table "schedules", force: :cascade do |t|
@@ -84,8 +80,6 @@ ActiveRecord::Schema.define(version: 2019_02_25_165626) do
   add_foreign_key "bookings", "artists"
   add_foreign_key "bookings", "profiles"
   add_foreign_key "profiles", "users", column: "users_id"
-  add_foreign_key "reviews", "artists"
   add_foreign_key "reviews", "bookings"
-  add_foreign_key "reviews", "profiles"
   add_foreign_key "schedules", "artists"
 end
