@@ -7,8 +7,12 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new(profile_params)
-    @profile.save
-    redirect_to profile_path
+    
+    if @profile.save
+      redirect_to profile_path
+    else
+      render :new
+    end
   end
 
   def show
