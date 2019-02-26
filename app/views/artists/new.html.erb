@@ -1,0 +1,14 @@
+<h1>Artist - Offer description</h1>
+<%= simple_form_for @artist do |f| %>
+  <%= f.input :band_name %>
+  <%= f.input :photo_url %>
+  <%= f.input :music_url %>
+  <%= f.input :price %>
+  <%= f.input :location %>
+  <%= f.input :area_range %>
+  <%= f.input :description %>
+  <%= f.input :category, as: :select2, collection: Category.all %>
+  <%= f.submit "Submit", class: "btn btn-flat" %>
+<% end %>
+
+
