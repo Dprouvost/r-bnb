@@ -7,8 +7,6 @@
 
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Category.delete_all
-
 Category.create!(name: "Rock")
 Category.create!(name: "Hip-Hop")
 Category.create!(name: "Electro")
