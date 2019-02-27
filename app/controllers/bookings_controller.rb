@@ -5,11 +5,16 @@ class BookingsController < ApplicationController
 
     def create
         @booking = Booking.new(params_booking)
-        # if @booking.save
-        #   PAYMENT PATH 
+        @profile = Profile.find(params[:profile_id])
+        @artist = Artist.find(params[:artist_id])
+        @booking.profile = @profile
+        @booking.artist = @artist 
+        # if @booking.save 
+        #     Change @booking.date status in the schedule table 
+        #     redirect_to VALIDATION_SCREEN 
         # else 
-        #   Back to booking create view 
-        # end 
+        #   render :new
+        #end  
     end 
 
     private 
