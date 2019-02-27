@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
     def new
         @booking = Booking.new
         @artist = Artist.find(params[:artist_id])
@@ -24,4 +25,5 @@ class BookingsController < ApplicationController
     def params_booking
         params.require(:booking).permit(:artist_id, :date)
     end
+
 end

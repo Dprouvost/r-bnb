@@ -11,6 +11,10 @@ Profile.destroy_all
 Artist.destroy_all
 Category.destroy_all 
 
+Category.destroy_all
+Artist.destroy_all
+
+
 Category.create!(name: "Rock")
 Category.create!(name: "Hip-Hop")
 Category.create!(name: "Electro")
@@ -30,6 +34,8 @@ Category.create!(name: "Funk")
 Category.create!(name: "Psychedelic Rock")
 Category.create!(name: "Tango")
 Category.create!(name: "Country")
+
+
 Category.create!(name: "Deep House")
 
 puts "Generating buyer..."
@@ -47,3 +53,4 @@ profile = Profile.create!(first_name: "Jamy", last_name:"Hendrix", user_type: "S
 artist = Artist.create!(band_name: "cépasorcier", photo_url: "https://vdr-nation.com/wp-content/uploads/2019/01/jamy-hendrix.jpg", music_url: "https://www.youtube.com/watch?v=0aDr3vieKvo", price: 6805, location: "Demandez à Marcel", area_range: 50, description: "Jamy Gourmaud, également connu sous son prénom Jamy, est un journaliste et animateur de télévision français né le 17 janvier 1964 à Fontenay-le-Comte.", profile_id: profile.id, category_id: cat.ids.first)
 
 puts "Seller done."
+
