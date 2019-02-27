@@ -1,8 +1,6 @@
 class SchedulesController < ApplicationController
   def new
     @schedule = Schedule.new
-  end
-
-  def month_calendar
+    @artist = Artist.find(params[:artist_id])
   end
 end
