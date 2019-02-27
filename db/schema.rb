@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_26_163540) do
+ActiveRecord::Schema.define(version: 2019_02_27_151243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_02_26_163540) do
     t.bigint "profile_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date"
     t.index ["artist_id"], name: "index_bookings_on_artist_id"
     t.index ["profile_id"], name: "index_bookings_on_profile_id"
   end
@@ -51,9 +52,9 @@ ActiveRecord::Schema.define(version: 2019_02_26_163540) do
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id"
     t.string "user_type"
-    t.index ["users_id"], name: "index_profiles_on_users_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -88,7 +89,7 @@ ActiveRecord::Schema.define(version: 2019_02_26_163540) do
   add_foreign_key "artists", "profiles"
   add_foreign_key "bookings", "artists"
   add_foreign_key "bookings", "profiles"
-  add_foreign_key "profiles", "users", column: "users_id"
+  add_foreign_key "profiles", "users"
   add_foreign_key "reviews", "bookings"
   add_foreign_key "schedules", "artists"
 end
