@@ -21,3 +21,21 @@
   opacity: 0.6;
   margin-bottom: 30px;
 }
+
+.show_banner{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.6;
+  color: rgb(50,50, 50);
+  text-align: center;
+  // image-resolution: 50vh;
+  // color: #eee;
+  // text-align: center;
+}
+
+.show_container{
+  background-color: grey;
+  width: 100vw;
+}
