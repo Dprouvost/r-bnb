@@ -1,5 +1,5 @@
 <h1>Review</h1>
-<%= simple_form_for [artist, review] do |f| %>
+<%= simple_form_for [booking, review] do |f| %>
   <%= f.input :comment %>  
   <%= f.input :rating, as: :select2, collection: Review::RATING %>
   <%= f.submit "Submit", class: "btn btn-flat" %>

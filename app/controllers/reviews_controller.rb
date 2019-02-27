@@ -1,12 +1,18 @@
 class ReviewsController < ApplicationController
 
+  def new 
+    @booking = Booking.find(params[:booking_id])
+    @review = Review.new
+  end 
+
   def create
-    @artist = Artist.find(params[:artist_id])
+    @booking = Booking.find(params[:booking_id])
     @review = Review.new(params_review)
-    @review.artist = @artist
+    @review.booking = @booking
     @review.save?
     redirect_to artist_path(artist)
   end
+
 
   private
   def params_review
