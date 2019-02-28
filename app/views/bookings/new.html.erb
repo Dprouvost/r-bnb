@@ -1,5 +1,10 @@
-<h1>Booking</h1>
-<%= simple_form_for [@artist, @booking] do |f| %>
-  <%= f.input :date %>  
-  <%= f.submit "Submit", class: "btn btn-flat" %>
-<% end %>
+<div class="container">
+  <h1>When do you want to book?</h1>
+  <%= simple_form_for [@artist, @booking] do |f| %>
+  <div>
+    <%= f.input :date %>  
+      <%= f.submit "Submit", class: "btn btn-flat" %>
+      <%= link_to "Back", artist_path(@artist), class: "btn btn-flat" %>
+  </div>
+  <% end %>
+</div>

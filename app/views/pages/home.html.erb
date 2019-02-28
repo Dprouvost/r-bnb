@@ -7,17 +7,17 @@
   </div>
 </div>
 
-  <div class="container">
+<div class="container">
   <div class="row">
     <% Artist.all.each do |artist| %>
-        <div class="col-xs-12 col-sm-4" id="card_container">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= artist.photo_url %>);"> 
+      <div class="col-xs-12 col-sm-4" id="card_container">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= artist.photo_url %>);"> 
           <h2><%= link_to artist.band_name, artist_path(artist)%></h2>
             <div class="card-description">
             <p><%= artist.category.name %></p>
             </div>
-          </div>
         </div>
-      <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
