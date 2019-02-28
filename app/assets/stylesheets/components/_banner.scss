@@ -2,7 +2,7 @@
   color: white;
   text-align: center;
   height: 400px;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  /* if you have a 70px navbar => height: calc(150vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
@@ -23,31 +23,104 @@
 }
 
 .photo_wrapper{
-  height: 10vw;
+  height: 50vw;
   opacity: 0.9;
   position: relative;
 }
 
 .artist_box{
-  background-color: rgba (200, 200, 200, 0,2);
+  background-color: rgba(150, 150, 150, 0.5);
   position: absolute;
-  left: 10px;
-  top: 10px;
-  text-align: center;
+  left: 20px;
+  top: 20px;
+  height: 70%;
+  width: 45%;
   color: white;
+  font-weight: bold;
+  border-color: white;
+  padding: 20px;
+  position:relative;
+}
+
+.artist_title{
+  text-align: center;
+}
+
+.artist_desc{
+  padding-top:30px;
+  color: rgb(50, 50, 50);
+  text-align: justify;
+  font-weight: 400;
+}
+
+.button_box{
+  position: absolute;
+  bottom:30px;
+  left: 10%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .tv_box{
-  background-color: rgba (200, 200, 200, 0,2);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(150, 150, 150, 0.5);
+  height: 70%;
+  padding: 20px;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 20px;
 }
 
 .stats_box{
-  background-color: rgba (200, 200, 200, 0,2);
+  background-color: rgba(150, 150, 150, 0.5);
   position: absolute;
   left:10px;
   right: 10px;
   bottom: 10px;
+}
+
+.input{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.input_box{
+  min-width: 250px;
+  background-color: rgba(150, 150, 150, 0.5);
+  // color: white;
+  font-weight: bold;
+
+  min-height: 40px;
+  display: flex;
+  align-content: center;
+}
+.input_box p{
+  margin: auto;
+}
+
+.output{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.output_box{
+  min-width: 250px;
+  background-color: rgba(75, 75, 75, 0.5);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  vertical-align:middle;
+  min-height: 40px;
+  display: flex;
+  align-content: center;
+}
+
+.output_box p{
+  margin: auto;
 }
