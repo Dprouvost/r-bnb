@@ -7,7 +7,7 @@
   <%= f.input :location %>
   <%= f.input :area_range %>
   <%= f.input :description %>
-  <%= f.association :category, as: :select2, collection: Category.all %>
+  <%= f.association :category, collection: Category.all, input_html: { class: 'select2' } %>
   <%= f.submit "Submit", class: "btn btn-flat" %>
 <% end %>
 
