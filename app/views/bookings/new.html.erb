@@ -1,5 +1,7 @@
+<div class="container">
 <h1>Booking</h1>
 <%= simple_form_for [@artist, @booking] do |f| %>
   <%= f.input :date %>  
   <%= f.submit "Submit", class: "btn btn-flat" %>
 <% end %>
+</div>

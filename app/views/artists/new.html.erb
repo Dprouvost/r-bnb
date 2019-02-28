@@ -1,14 +1,16 @@
-<h1>Artist - Offer description</h1>
-<%= simple_form_for @artist do |f| %>
-  <%= f.input :band_name %>
-  <%= f.input :photo_url %>
-  <%= f.input :music_url %>
-  <%= f.input :price %>
-  <%= f.input :location %>
-  <%= f.input :area_range %>
-  <%= f.input :description %>
-  <%= f.association :category, collection: Category.all, input_html: { class: 'select2' } %>
-  <%= f.submit "Submit", class: "btn btn-flat" %>
-<% end %>
+<div class="container">
+  <h1>Artist - Offer description</h1>
+  <%= simple_form_for @artist do |f| %>
+    <%= f.input :band_name, placeholder: 'The Beatles' %>
+    <%= f.input :photo_url, placeholder: 'Link to your best group picture' %>
+    <%= f.input :music_url, placeholder: 'Link to one of your performance on Youtube' %>
+    <%= f.input :price, placeholder: "'Money, Money, Money' - ABBA" %>
+    <%= f.input :location %>
+    <%= f.input :area_range, placeholder: "'And I would walk 500 hundred miles' - The Proclaimers " %>
+    <%= f.input :description %>
+    <%= f.association :category, collection: Category.all, input_html: { class: 'select2' } %>
+    <%= f.submit "Submit", class: "btn btn-flat" %>
+  <% end %>
+</div>
 
 
