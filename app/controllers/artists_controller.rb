@@ -25,7 +25,7 @@ class ArtistsController < ApplicationController
   def show
     @artist = Artist.find(params[:id])
     @booking = Booking.new
-    @review = Review.new 
+    @review = Review.new
   end
 
   def update
