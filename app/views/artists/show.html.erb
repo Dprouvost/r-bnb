@@ -3,38 +3,60 @@
   style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2)50%), url(<%= @artist.photo_url %>);">
   
   <div class="artist_box">
-    <h1><%= @artist.band_name.upcase %></h1>
-    <p><%= @artist.description %></p>
-    <br>
-    <%= link_to "Book now!", root_path, class: 'btn btn-flat' %>
-    <br>
-    <%= link_to "Back to all artists", root_path %>
-  </div>
-  
-
-  <div class="tv_box">
-    <a href= '@artist.music_url'></a>
-  </div>
-
-
-  <div class="stats_box">
-    <div class="col-sm-12 col-md-6">
-        <table class="table table-bordered">
-          <tbody>
-            <thead>
-              <th>Category:</th>
-              <th>Price:</th>
-              <th>Location:</th>
-              <th>Travel:</th>
-            </thead>
-              <tr>
-                <td><%= @artist.category.name %></td>
-                <td><%= @artist.price %>€</td>
-                <td><%= @artist.location %></td>
-                <td><%= @artist.area_range %>km</td>
-              </tr>
-          </tbody>
-        </table>
+    <div class="artist_title">
+      <h1>Who is really: <%= @artist.band_name.capitalize %>?</h1>
+    </div>
+    <div class="artist_desc">
+      <p><%= @artist.description %></p>
+    </div>
+    <div class="button_box">
+    <div class="book_now">
+      <%= link_to "Book now!", new_artist_booking_path(@artist), class: 'btn btn-flat' %>
+    </div>
+    <div class="back_to_all_artists">
+      <%= link_to "Back to all artists", root_path, class: 'btn btn-ghost' %>
+    </div>
+    <div class="add_review">
+      <%= link_to "Add a review!", root_path,class: 'btn btn-flat'%> 
+      <%# change root_path to review_path %>
+    </div>
     </div>
   </div>
-</div>
+  
+  <div class="tv_box">
+    <h1>Galery</h1>
+    <%= youtube_video @artist.music_url %>
+  </div>
+
+  <div class="stats_box">
+    <%# <div class="col-sm-12 col-md-6"> %>
+      <div class="row input">
+        <div class="input_box">
+          <p>Category </p>
+        </div>
+        <div class="input_box">
+          <p>Price</p>
+        </div>
+        <div class="input_box">
+          <p>Location</p>
+        </div>
+        <div class="input_box">
+          <p>Travel</p>
+        </div>
+      </div>
+      <div class="row output">
+        <div class="output_box">
+          <p><%= @artist.category.name %></p>
+        </div>
+        <div class="output_box">
+          <p><%= @artist.price %>€</p>
+        </div>
+        <div class="output_box">
+          <p><%= @artist.location %></p>
+        </div>
+        <div class="output_box">
+          <p><%= @artist.area_range %>km</p>
+        </div>
+      </div>
+    <%# </div> %>
+  </div>
