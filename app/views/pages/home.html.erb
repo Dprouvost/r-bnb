@@ -2,8 +2,15 @@
   <div class="container">
     <h1>R-bnb </h1>
     <p>The best music band platform! </p>
-    
-    <a class="btn btn-flat" href="#">Search for a band</a>
+        <div>
+            <%= form_tag artists_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find an artist"
+            %>
+          <% end %>
+        </div>
   </div>
 </div>
 
