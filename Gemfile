@@ -11,7 +11,6 @@ gem 'devise'
 gem 'select2_simple_form', github: 'lndl/select2_simple_form', tag: '0.7.3'
 
 gem 'autoprefixer-rails'
-gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.5.0'
 gem 'sassc-rails'
 gem 'simple_form'
@@ -31,7 +30,5 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
-gem 'simple_form'
 gem 'flatpickr_rails'
-gem 'select2_simple_form', github: 'lndl/select2_simple_form', tag: '0.7.3'
 

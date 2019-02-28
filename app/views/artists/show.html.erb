@@ -15,12 +15,14 @@
             <th>Price</th>
             <th>Location</th>
             <th>Travel</th>
+            <th>Gallery</th>
           </thead>
             <tr>
               <td><%= @artist.category.name %></td>
               <td><%= @artist.price %>€</td>
               <td><%= @artist.location %></td>
               <td><%= @artist.area_range %>km</td>
+              <td><%= @artist.music_url %>></td>
               <td>
                 <%= link_to artist_path(@artist), method: :delete, data: { confirm: "Are you sure?" } do %>
                   <i class="fa fa-trash destroy_artist"></i>
