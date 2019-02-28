@@ -1,7 +1,16 @@
-<div class="container">
+
+<div class="show_wrapper"   
+style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2)50%), url(<%= @artist.photo_url %>);">
+
+
+<div class="presentation_wrapper">
+<h1><%= @artist.band_name %></h1>
+<p><%= @artist.category %></p>
+<p><%= @artist.description %></p>
+</div>
   <div class="row">
     <div class="col-xs-12">
-      <h1><%= @artist.band_name %></h1>
+      
       <%= link_to "Back to all artists", root_path %>
     </div>
   </div>
@@ -32,6 +41,7 @@
         </tbody>
       </table>
     </div>
+    </div>
     <%# <div class="col-sm-12 col-md-6">
       <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
     <%# </div> %>
@@ -58,7 +68,7 @@
         </ul>
       <% end %>
     </div>
-  </div>
+
   <div class="row">
     <%# <div class="col-xs-12">
       <%= render "reviews/new", cocktail: @cocktail, review: @review %>
