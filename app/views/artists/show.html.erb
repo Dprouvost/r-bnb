@@ -1,66 +1,40 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1><%= @artist.band_name %></h1>
-      <%= link_to "Back to all artists", root_path %>
-    </div>
+
+<div class="photo_wrapper" 
+  style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2)50%), url(<%= @artist.photo_url %>);">
+  
+  <div class="artist_box">
+    <h1><%= @artist.band_name.upcase %></h1>
+    <p><%= @artist.description %></p>
+    <br>
+    <%= link_to "Book now!", root_path, class: 'btn btn-flat' %>
+    <br>
+    <%= link_to "Back to all artists", root_path %>
   </div>
-  <div class="row">
+  
+
+  <div class="tv_box">
+    <a href= '@artist.music_url'></a>
+  </div>
+
+
+  <div class="stats_box">
     <div class="col-sm-12 col-md-6">
-      <h3>Offer</h3>
-      <table class="table table-bordered">
-        <tbody>
-          <thead>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Location</th>
-            <th>Travel</th>
-            <th>Gallery</th>
-          </thead>
-            <tr>
-              <td><%= @artist.category.name %></td>
-              <td><%= @artist.price %>€</td>
-              <td><%= @artist.location %></td>
-              <td><%= @artist.area_range %>km</td>
-              <td><%= @artist.music_url %>></td>
-              <td>
-                <%= link_to artist_path(@artist), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="fa fa-trash destroy_artist"></i>
-                <% end %>
-              </td>
-            </tr>
-        </tbody>
-      </table>
-    </div>
-    <%# <div class="col-sm-12 col-md-6">
-      <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
-    <%# </div> %>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Reviews</h3>
-      <% if @artist.reviews.empty? %>
-        <p>Be the first to let a review</p>
-      <% else %>
-        <ul class="list-group">
-          <% @artist.reviews.each do |review| %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span class="badge badge-primary badge-pill">
-                <% counter = 0 %>
-                <% 5.times do %>
-                  <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
-                  <% counter += 1 %>
-                <% end %>
-              </span>
-              <%= review.comment %>
-            </li>
-          <% end %>
-        </ul>
-      <% end %>
+        <table class="table table-bordered">
+          <tbody>
+            <thead>
+              <th>Category:</th>
+              <th>Price:</th>
+              <th>Location:</th>
+              <th>Travel:</th>
+            </thead>
+              <tr>
+                <td><%= @artist.category.name %></td>
+                <td><%= @artist.price %>€</td>
+                <td><%= @artist.location %></td>
+                <td><%= @artist.area_range %>km</td>
+              </tr>
+          </tbody>
+        </table>
     </div>
   </div>
-  <div class="row">
-    <%# <div class="col-xs-12">
-      <%= render "reviews/new", cocktail: @cocktail, review: @review %>
-    <%# </div> %>
-  </div>
+</div>
