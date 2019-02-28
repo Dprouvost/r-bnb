@@ -23,104 +23,59 @@
 }
 
 .photo_wrapper{
+  width: 100vw;
   height: 50vw;
   opacity: 0.9;
-  position: relative;
 }
 
 .artist_box{
   background-color: rgba(150, 150, 150, 0.5);
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  height: 70%;
-  width: 45%;
-  color: white;
-  font-weight: bold;
-  border-color: white;
   padding: 20px;
-  position:relative;
+  display: inline-block;
+  justify-items: center;
 }
 
-.artist_title{
+.artist_box h1{
   text-align: center;
+  color: rbg(200, 200, 200);
+  font-weight: bold;
 }
 
-.artist_desc{
+.artist_box p{
   padding-top:30px;
   color: rgb(50, 50, 50);
   text-align: justify;
   font-weight: 400;
 }
 
+.artist_title{
+  text-align: center;
+  color: rbg(200, 200, 200);
+  font-weight: bold;
+}
+
+.avatar-large {
+  width: 256px;
+  border-radius: 50%;
+}
+
+.row1{
+  height: 50vh;
+}
+
 .button_box{
-  position: absolute;
-  bottom:30px;
-  left: 10%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .tv_box{
   text-align: center;
-  color: white;
+  color: rbg(200, 200, 200);
   font-weight: bold;
   background-color: rgba(150, 150, 150, 0.5);
-  height: 70%;
   padding: 20px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
 }
 
 .stats_box{
   background-color: rgba(150, 150, 150, 0.5);
-  position: absolute;
-  left:10px;
-  right: 10px;
-  bottom: 10px;
-}
-
-.input{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-}
-
-.input_box{
-  min-width: 250px;
-  background-color: rgba(150, 150, 150, 0.5);
-  // color: white;
-  font-weight: bold;
-
-  min-height: 40px;
-  display: flex;
-  align-content: center;
-}
-.input_box p{
-  margin: auto;
-}
-
-.output{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-}
-
-.output_box{
-  min-width: 250px;
-  background-color: rgba(75, 75, 75, 0.5);
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  vertical-align:middle;
-  min-height: 40px;
-  display: flex;
-  align-content: center;
-}
-
-.output_box p{
-  margin: auto;
 }
