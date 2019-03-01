@@ -6,8 +6,9 @@ Rails.application.routes.draw do
     resources :profiles, only: [ :new, :create, :show, :edit, :update ]
     resources :artists, only: [ :index, :new, :create, :show, :edit, :update, :destroy] do
       resources :reviews, only: [ :index, :new, :create, :destroy ]
-      resources :bookings, only: [ :new, :create ]
+      resources :bookings, only: [ :index, :new, :create ]
     end
+    resources :bookings, only: [:destroy]
 end
 
 

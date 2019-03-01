@@ -1,0 +1,12 @@
+<div class="container">
+    <h1> Planned performances</h1>
+    <% @bookings.each do |booking| %>
+        <div>
+            <%= booking.date %>
+            <%= link_to booking_path(booking), method: :delete, 
+            data: { confirm: "Sure?" } do %>
+              <i class="fas fa-times"></i>
+            <% end %>
+        </div>
+    <% end %>
+</div>
