@@ -1,26 +1,49 @@
-.comments-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-.titles {
+.title {
   display: flex;
-  justify-content: space-betweem;
+  position: relative;
+  margin-bottom: 10px;
 }
-.comment {
-  background-color: white;
-  margin: 5px;
-  padding: 15px;
-  border-radius: 3px;
-  border: 1px solid rgb(235,235,235);
-  vertical-align: middle;
+
+#back {
+  font-size: 30px !important;
  
 }
 
-.trash {
-  margin-right: 15px;
-  margin-top: -1px;
-  font-size: 20px;
+h1 {
+  position: absolute;
+  left: 30px;
+  bottom: -15px;
+}
+.comments-layout {
+  display: grid;
+  grid-template-columns: 1fr;
   
+}
+
+.comment {
+  background-color: white;
+  padding: 15px;
+  margin: 5px 0px;
+  border-radius: 3px;
+  border: 1px solid rgb(235,235,235);
+  vertical-align: middle;
+  position: relative;
+ 
+}
+
+.position-delete {
+  font-size: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.position-delete:hover {
+  color: red;
+}
+
+.stars {
+  color: #F56400;
 }
 
 .stars-margin-bottom {
@@ -30,4 +53,8 @@
 .contain {
   display: flex;
   justify-content: space-between;
+}
+
+h2 {
+  font-size: 18px;
 }
