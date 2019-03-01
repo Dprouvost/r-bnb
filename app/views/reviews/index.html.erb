@@ -1,29 +1,28 @@
 <div class="container">
-  <div class="titles">
-    <div>
-      <h1>Your Review</h1>
-    </div>
-    <div>
-      <h2><%= pluralize @reviews.size, "review" %></h2>
-    </div>
+  <div class="title">
+    <%= link_to artist_path(@artist.id) do %>
+      <i class="fas fa-chevron-left" id="back"></i>
+    <% end %>
+    <h1 class="your-review">Your Review</h1>
   </div>
+  <h2 class="review-count"><%= pluralize @reviews.size, "review" %></h2>
 
   <div class="comments-layout">
     <% @reviews.each do |review| %>
       <div class="comment">
         <p class="stars-margin-bottom">
           <% review.rating.times do %>
-            <i class='fas fa-star'></i>
+            <i class='fas fa-star stars'></i>
           <% end %>
         </p>
         <div class="contain">
           <div class="review content">
             <p><%= review.comment %></p>
           </div>
-          <div class="trash">
-            <%= link_to artist_reviews_path, method: :delete, 
+          <div>
+            <%= link_to artist_review_path(@artist.id ,review.id), method: :delete, 
             data: { confirm: "Sure?" } do %>
-              <i class="fas fa-times"></i>
+              <i class="fas fa-times position-delete"></i>
             <% end %>
         </div>
       </div>

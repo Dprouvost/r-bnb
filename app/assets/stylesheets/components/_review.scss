@@ -1,26 +1,48 @@
+.title {
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#back {
+  font-size: 30px !important;
+}
+
+.your-review {
+  position: absolute;
+  left: 30px;
+  bottom: -15px;
+}
 .comments-layout {
   display: grid;
   grid-template-columns: 1fr;
+  
 }
-.titles {
-  display: flex;
-  justify-content: space-betweem;
-}
+
 .comment {
   background-color: white;
-  margin: 5px;
   padding: 15px;
+  margin: 5px 0px;
   border-radius: 3px;
   border: 1px solid rgb(235,235,235);
   vertical-align: middle;
+  position: relative;
  
 }
 
-.trash {
-  margin-right: 15px;
-  margin-top: -1px;
-  font-size: 20px;
-  
+.position-delete {
+  font-size: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.position-delete:hover {
+  color: red;
+}
+
+.stars {
+  color: #F56400;
 }
 
 .stars-margin-bottom {
@@ -30,4 +52,8 @@
 .contain {
   display: flex;
   justify-content: space-between;
+}
+
+.review-count {
+  font-size: 18px;
 }
