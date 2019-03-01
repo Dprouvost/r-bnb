@@ -1,9 +1,9 @@
 class ArtistsController < ApplicationController
 
-  before_action :set_artist, only: [:edit, :update, :destroy]
+  before_action :set_artist, only: [:index, :edit, :update, :destroy]
 
   def index
-    @artists = Artist.all
+      @artists = Artist.all
   end
 
   def new
