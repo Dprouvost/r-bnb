@@ -1,10 +1,13 @@
-<div class="photo_wrapper">
-  <h1>When do you want to book?</h1>
-   <%= simple_form_for [@artist, @booking] do |f| %>
-  <div>
-    <%= f.input :date %>  
-      <%= f.submit "Submit", class: "btn btn-flat"%>
-      <%= link_to "Back", artist_path(@artist), class: "btn btn-ghost" %>
-  </div>
-  <% end %>
+<div class="container">
+  <%# <div class="photo_wrapper"> %>
+    <h1>When do you want to book?</h1>
+    <%= simple_form_for [@artist, @booking] do |f| %>
+    <div>
+      <%= f.input :date %>  
+        <%= f.submit "Submit", class: "btn btn-flat"%>
+        <%= link_to "Back", artist_path(@artist), class: "btn btn-ghost" %>
+    </div>
+    <% end %>
+  <%# </div> %>
 </div>
+

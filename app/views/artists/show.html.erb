@@ -18,14 +18,13 @@
 
         <div class="button_box">
           <div class="book_now">
-            <%= link_to "Book now!", new_artist_booking_path(@artist), class: 'btn btn-flat' %>
-          </div>
-          <div class="back_to_all_artists">
-            <%= link_to "Back to all artists", root_path, class: 'btn btn-ghost' %>
+            <%= link_to "Book now", new_artist_booking_path(@artist), class: 'btn btn-flat' %>
           </div>
           <div class="add_review">
-            <%= link_to "Add a review!", new_artist_review_path(@artist) ,class: 'btn btn-flat'%> 
-            <%# change root_path to review_path %>
+            <%= link_to "Add a review", new_artist_review_path(@artist) ,class: 'btn btn-flat'%> 
+          </div>
+          <div class="add_review">
+            <%= link_to "See review", artist_reviews_path(@artist) ,class: 'btn btn-flat'%> 
           </div>
         </div>
 
