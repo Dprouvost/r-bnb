@@ -24,7 +24,7 @@
             <%= link_to "Back to all artists", root_path, class: 'btn btn-ghost' %>
           </div>
           <div class="add_review">
-            <%= link_to "Add a review!", root_path,class: 'btn btn-flat'%> 
+            <%= link_to "Add a review!", new_artist_review_path(@artist) ,class: 'btn btn-flat'%> 
             <%# change root_path to review_path %>
           </div>
         </div>
