@@ -1,0 +1,33 @@
+.comments-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.titles {
+  display: flex;
+  justify-content: space-betweem;
+}
+.comment {
+  background-color: white;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 3px;
+  border: 1px solid rgb(235,235,235);
+  vertical-align: middle;
+ 
+}
+
+.trash {
+  margin-right: 15px;
+  margin-top: -1px;
+  font-size: 20px;
+  
+}
+
+.stars-margin-bottom {
+  margin-bottom: 0px !important;
+}
+
+.contain {
+  display: flex;
+  justify-content: space-between;
+}
