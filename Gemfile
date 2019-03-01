@@ -31,3 +31,4 @@ end
 
 gem 'flatpickr_rails'
 
+gem 'cloudinary', '~> 1.9.1'
