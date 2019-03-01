@@ -2,7 +2,7 @@
   color: white;
   text-align: center;
   height: 400px;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  /* if you have a 70px navbar => height: calc(150vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
@@ -23,31 +23,91 @@
 }
 
 .photo_wrapper{
-  height: 10vw;
+  width: 100vw;
+  height: 35vw;
   opacity: 0.9;
-  position: relative;
 }
 
 .artist_box{
-  background-color: rgba (200, 200, 200, 0,2);
-  position: absolute;
-  left: 10px;
-  top: 10px;
+  background-color: rgba(150, 150, 150, 0.5);
+  height: 34vw;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.artist_box h1{
   text-align: center;
-  color: white;
+  color: rbg(200, 200, 200);
+  font-weight: bold;
+}
+
+.artist_box p{
+  padding-top:30px;
+  padding-left: 20px;
+  color: rgb(50, 50, 50);
+  text-align: justify;
+  font-weight: 400;
+}
+
+.artist_avatar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-large {
+  width: 256px;
+  border-radius: 50%;
+}
+
+.button_box{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+.artist_box_2{
+  background-color: rgba(150, 150, 150, 0.5);
+  height: 34vw;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .tv_box{
-  background-color: rgba (200, 200, 200, 0,2);
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.artist_box_2 h1{ 
+  text-align: center;
+  color: rbg(200, 200, 200);
+  font-weight: bold;
 }
 
 .stats_box{
-  background-color: rgba (200, 200, 200, 0,2);
-  position: absolute;
-  left:10px;
-  right: 10px;
-  bottom: 10px;
+  background-color: rgba(150, 150, 150, 0.5);
+  height: 6vw;
+  border: white;
+  text-align: center;
+  margin: auto;
+}
+
+.stats_box h3{
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.stats_box p{
+  color: #F6537A;
+  font-weight: 800;
+}
+
+.row1{
+  padding: 5px;
 }

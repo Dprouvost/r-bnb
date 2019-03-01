@@ -1,8 +1,8 @@
-<h1>Review</h1>
-<%= simple_form_for [booking, review] do |f| %>
-  <%= f.input :comment %>  
-  <%= f.input :rating, as: :select2, collection: Review::RATING %>
-  <%= f.submit "Submit", class: "btn btn-flat" %>
-<% end %>
-
+<div class="container">
+    <%= simple_form_for @review, :url => artist_reviews_path, :method => :post do |f| %>
+    <%= f.input :comment, placeholder: "Add a comment" %>  
+    <%= f.input :rating, collection: Review::RATING %>
+    <%= f.submit "Submit", class: "btn btn-flat" %>
+  <% end %>
+</div>
 
