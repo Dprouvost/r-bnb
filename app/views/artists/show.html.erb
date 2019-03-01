@@ -1,15 +1,21 @@
 
 <div class="photo_wrapper">
+
   <div class="row">
+
     <div class="col-xs-12 col-sm-6">
+
       <div class="artist_box">
+
         <div class="artist_text">
             <h1>Who is really: <%= @artist.band_name.capitalize %>?</h1>
             <p><%= @artist.description %></p>
         </div>
+
         <div class="artist_avatar">
           <%= artist_avatar @artist.photo_url %>
         </div>
+
         <div class="button_box">
           <div class="book_now">
             <%= link_to "Book now!", new_artist_booking_path(@artist), class: 'btn btn-flat' %>
@@ -22,45 +28,60 @@
             <%# change root_path to review_path %>
           </div>
         </div>
+
       </div>
+
     </div>
+
+
     <div class="col-xs-12 col-sm-6">
-      <div class="artist_box">
-        <h1>Galery</h1>
-        <%= youtube_video @artist.music_url %>
+
+      <div class="artist_box_2">
+        <div >
+          <h1>Galery</h1>
+        </div>
+
+        <div class="tv_box">
+          <%= youtube_video @artist.music_url %>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+  <div class="stats_box">
+    <div class="row row1">
+      <div class="col-xs-6 col-sm-3">
+        <h3>Category </h3>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <h3>Price</h3>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <h3>Location</h3>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <h3>Travel</h3>
       </div>
     </div>
-  </div>
 
-<div class="artist_box">
-  <div class="row">
-    <div class="col-xs-6 col-sm-3">
-      <p>Category </p>
+    <div class="row row1">
+      <div class="col-xs-6 col-sm-3">
+        <p><%= @artist.category.name %></p>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <p><%= @artist.price %>€</p>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <p><%= @artist.location %></p>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <p><%= @artist.area_range %>km</p>
+      </div>
     </div>
-    <div class="col-xs-6 col-sm-3">
-      <p>Price</p>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <p>Location</p>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <p>Travel</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-6 col-sm-3">
-      <p><%= @artist.category.name %></p>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <p><%= @artist.price %>€</p>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <p><%= @artist.location %></p>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <p><%= @artist.area_range %>km</p>
-    </div>
-  </div>
   </div>
 </div>

@@ -24,15 +24,17 @@
 
 .photo_wrapper{
   width: 100vw;
-  height: 50vw;
+  height: 35vw;
   opacity: 0.9;
 }
 
 .artist_box{
   background-color: rgba(150, 150, 150, 0.5);
-  padding: 20px;
-  display: inline-block;
-  justify-items: center;
+  height: 34vw;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .artist_box h1{
@@ -43,15 +45,16 @@
 
 .artist_box p{
   padding-top:30px;
+  padding-left: 20px;
   color: rgb(50, 50, 50);
   text-align: justify;
   font-weight: 400;
 }
 
-.artist_title{
-  text-align: center;
-  color: rbg(200, 200, 200);
-  font-weight: bold;
+.artist_avatar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatar-large {
@@ -59,23 +62,52 @@
   border-radius: 50%;
 }
 
-.row1{
-  height: 50vh;
-}
-
 .button_box{
   display: flex;
   justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+.artist_box_2{
+  background-color: rgba(150, 150, 150, 0.5);
+  height: 34vw;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .tv_box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.artist_box_2 h1{ 
   text-align: center;
   color: rbg(200, 200, 200);
   font-weight: bold;
-  background-color: rgba(150, 150, 150, 0.5);
-  padding: 20px;
 }
 
 .stats_box{
   background-color: rgba(150, 150, 150, 0.5);
+  height: 6vw;
+  border: white;
+  text-align: center;
+  margin: auto;
+}
+
+.stats_box h3{
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.stats_box p{
+  color: #F6537A;
+  font-weight: 800;
+}
+
+.row1{
+  padding: 5px;
 }
