@@ -48,9 +48,7 @@ puts "Buyer done - Generating seller..."
 cat = Category.where(name: "Psychedelic Rock")
 seller = User.create!(email:"seller@seller.com", password:"123456")
 profile = Profile.create!(first_name: "Jamy", last_name:"Hendrix", user_type: "Seller", user_id: seller.id)
-artist = Artist.create!(band_name: "cépasorcier", photo_url: "https://vdr-nation.com/wp-content/uploads/2019/01/jamy-hendrix.jpg", music_url: "https://www.youtube.com/watch?v=0aDr3vieKvo", price: 6805, location: "Demandez à Marcel", area_range: 50, description: "Jamy Gourmaud, également connu sous son prénom Jamy, est un journaliste et animateur de télévision français né le 17 janvier 1964 à Fontenay-le-Comte.", profile_id: profile.id, category_id: cat.ids.first)
-review = Review.create!(rating: 4, comment: "bkjwdjwioe fiwefiwefjew ihfwe")
-# artist.review_id = review.id
-review.artist_id = artist.id
+artist = Artist.create!(band_name: "cépasorcier", photo_url: "https://vdr-nation.com/wp-content/uploads/2019/01/jamy-hendrix.jpg", music_url: "https://www.youtube.com/embed/qchPLaiKocI", price: 6805, location: "Demandez à Marcel", area_range: 50, description: "Jamy Gourmaud, également connu sous son prénom Jamy, est un journaliste et animateur de télévision français né le 17 janvier 1964 à Fontenay-le-Comte.", profile_id: profile.id, category_id: cat.ids.first)
+
 puts "Seller done."
 
