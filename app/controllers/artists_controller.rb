@@ -1,9 +1,13 @@
 class ArtistsController < ApplicationController
 
-  before_action :set_artist, only: [:index, :edit, :update, :destroy]
+  before_action :set_artist, only: [ :edit, :update, :destroy]
 
   def index
-      @artists = Artist.all
+      if params[:query].present?
+        @artists = Artist.where("band_name ILIKE ?", "%#{params[:query]}%")
+      else
+        @artists = Artist.all
+      end 
   end
 
   def new

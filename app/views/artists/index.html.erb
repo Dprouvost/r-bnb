@@ -1,0 +1,30 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1543791824-56ebdd59aa3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80);">
+  <div class="container">
+    <h1>R-bnb </h1>
+    <p>The best music band platform! </p>
+        <div>
+            <%= form_tag artists_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find an artist"
+            %>
+          <% end %>
+        </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @artists.each do |artist| %>
+      <div class="col-xs-12 col-sm-4" id="card_container">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= artist.photo_url %>);"> 
+          <h2><%= link_to artist.band_name, artist_path(artist)%></h2>
+            <div class="card-description">
+            <p><%= artist.category.name %></p>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
