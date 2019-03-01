@@ -12,9 +12,7 @@ def create
     @booking.profile = current_user.profile
     @booking.artist = @artist 
     if @booking.save 
-        # Change @booking.date status in the schedule table 
-        # redirect_to VALIDATION_SCREEN 
-        redirect_to root_path
+        redirect_to dashboard_path
     else 
         render :new
     end  
